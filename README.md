@@ -1,4 +1,4 @@
-sbep
-====
+SB-Addons
+=========
 
-Spacebuild Enhancement Pack
+Spacebuild Addons
