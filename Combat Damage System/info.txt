@@ -1,0 +1,9 @@
+"AddonInfo"
+{
+	"name"		"Combat Damage System"
+	"version"	"1.0.2"
+	"author_name"	"SnakeSVx"
+	"author_email"			"spacebuild.dev@gmail.com"
+	"author_url"	"http://www.snakesvx.net"
+	"info"		"Adds a combat damage system"
+}

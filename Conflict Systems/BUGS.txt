@@ -1,0 +1,10 @@
+Please use this file to report any bugs you find
+
+
+On 02/02/2008 by Solthar;
+	* (1)  Beam based weaponry seems to be missing by a set distance, while projectile based weaponry is just fine. 
+	* (2)  Only one laser and two missiles - need more weapons :-P
+	* (3)  conflict_target_select / conflict_link: Doesn't seem to remove linked turrets on use properly
+	* (4)  Bad path to sound in conflict_p_laser
+	* (5)  My homebrew modeling skills are utter crap; need someone more skilled to assist in modelling the turrets, any offers? :-)
+	* (6)  conflict_Target_select and conflict_status_indicator have visual problems when a transparent texture is drawn behind them.

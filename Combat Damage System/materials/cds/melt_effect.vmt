@@ -1,0 +1,25 @@
+"UnlitTwoTexture"
+{
+ 	"$model" 1
+    "$nocull" "1"
+	"$basetexture" "cds/melt_effect"
+	"$texture2" "cds/melt_effect"
+
+	"$additive" "1"
+	
+	"Proxies"
+	{
+		"TextureScroll"
+		{
+			"texturescrollvar" "$basetexturetransform"
+			"texturescrollrate" 0.2
+			"texturescrollangle" 90
+		}
+		"TextureScroll"
+		{
+			"texturescrollvar" "$texture2transform"
+			"texturescrollrate" 0.4
+			"texturescrollangle" 180
+		}
+	}
+}

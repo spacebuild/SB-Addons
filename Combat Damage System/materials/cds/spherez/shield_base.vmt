@@ -1,0 +1,21 @@
+"UnlitTwoTexture"
+{
+	"$baseTexture" "cds/shield_glow_A"
+	"$Texture2" "cds/shield_glow_B"
+	"$nodecal" "1"
+	"$additive" "1"
+	"$no_fullbright" 1
+	"$model" "1"
+	"$nofog" "1"
+	
+	"Proxies"
+	{
+		"TextureScroll"
+		{
+			"texturescrollvar" "$texture2transform"
+			"texturescrollrate" -1
+			"texturescrollangle" 0
+		}
+
+	}
+}

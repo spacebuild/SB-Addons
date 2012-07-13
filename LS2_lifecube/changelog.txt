@@ -1,0 +1,12 @@
+Cubesystems Life-Cube
+
+v1.2
+Added Resources generator:
+methane, nitrous, nitrogen, naturalgas, propane
+
+Added Storage Device with 1 000 000 capacity
+
+V1.1
+
+Generate Resources:
+Water, Steam, Heavy water, energy, ZPE, air, coolant

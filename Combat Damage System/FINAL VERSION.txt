@@ -1,0 +1,11 @@
+FINAL VERSION OF THIS IS Revision 373 (377).
+
+Any updates after this are just extras or test things that are put on for testing reasons. If you encounter any problems or any other things with
+any of the revisions after these 2, just use Update To Revsion and put in either 373 or 377 (or download the zip file from the garrysmod.org Version 1.0.2)
+
+This is an informative message to let you know that production for this SVN has stopped since then and the next version will be CDS 2!
+
+ ^
+ |
+
+When Pigs fly. -- LP

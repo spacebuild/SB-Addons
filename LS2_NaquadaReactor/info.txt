@@ -1,0 +1,10 @@
+"AddonInfo"
+{
+	"name"				"Naquada Reactor"
+	"version"			"2.1"
+	"up_date"			"June 29th 2007"
+	"author_name"			"Bro_21"
+	"author_email"			"spacebuild.dev@gmail.com"
+	"author_url"			"www.snakesvx.net"
+	"info"				"A working Naquada reactor. From SG-1"
+}

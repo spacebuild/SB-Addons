@@ -1,0 +1,262 @@
+"0"
+{
+	"Text"				"#Tool_pterol_wheel_name"
+	"Description"			"#Tool_pterol_wheel_desc"
+
+	"ComboBox"
+	{
+		"Label"				"#Presets"
+		"MenuButton"			"1"
+		"Folder"			"Petrol_wheel"
+		
+		"Options"
+		{
+			"Default"
+			{
+				"Petrol_wheel_torque"			"3000"
+				"Petrol_wheel_friction"		"0"
+				"Petrol_wheel_nocollide"		"1"
+				"Petrol_wheel_forcelimit"		"0"
+				"Petrol_wheel_fwd"			"1"
+				"Petrol_wheel_bck"			"-1"
+				"Petrol_wheel_stop"			"0"
+			}
+		}		
+
+		"CVars"
+		{
+			"0"	"Petrol_wheel_torque"
+			"0"	"Petrol_wheel_friction"
+			"0"	"Petrol_wheel_nocollide"
+			"0"	"Petrol_wheel_forcelimit"
+			"0" "Petrol_wheel_fwd"
+			"0" "Petrol_wheel_bck"
+			"0" "Petrol_wheel_stop"
+		}
+	}
+
+	"Slider"
+	{
+		"Label"				"#PetrolWheelTool_group"
+		"Description"		"#PetrolWheelTool_group_desc"
+		"Type"				"Float"
+		"Min"				"-10"
+		"Max"				"10"
+		"Command"			"Petrol_wheel_fwd"
+	}
+	
+	"Slider"
+	{
+		"Label"				"#PetrolWheelTool_group_stop"
+		"Description"		"#PetrolWheelTool_group_desc"
+		"Type"				"Float"
+		"Min"				"-10"
+		"Max"				"10"
+		"Command"			"Petrol_wheel_stop"
+	}
+	
+	"Slider"
+	{
+		"Label"				"#PetrolWheelTool_group_reverse"
+		"Description"		"#PetrolWheelTool_group_desc"
+		"Type"				"Float"
+		"Min"				"-10"
+		"Max"				"10"
+		"Command"			"Petrol_wheel_bck"
+	}
+
+	"ComboBox"
+	{
+		"Label"				"#WheelTool_model"
+		"MenuButton"			"0"
+	
+		"Options"
+		{
+			"#Saw_Blade"
+			{
+				"Petrol_wheel_model"		"models/props_junk/sawblade001a.mdl"
+				"Petrol_wheel_rx"		"90"
+				"Petrol_wheel_ry"		"0"
+				"Petrol_wheel_rz"		"0"
+			}
+
+			"#Car_wheel"
+			{
+				"Petrol_wheel_model"		"models/props_vehicles/carparts_wheel01a.mdl"
+				"Petrol_wheel_rx"		"90"
+				"Petrol_wheel_ry"		"0"
+				"Petrol_wheel_rz"		"90"
+			}
+
+			"#APC_Wheel"
+			{
+
+				"Petrol_wheel_model"		"models/props_vehicles/apc_tire001.mdl"
+				"Petrol_wheel_rx"		"0"
+				"Petrol_wheel_ry"		"0"
+				"Petrol_wheel_rz"		"0"
+			}
+
+
+			"#Tractor_Wheel"
+			{
+
+				"Petrol_wheel_model"		"models/props_vehicles/tire001a_tractor.mdl"
+				"Petrol_wheel_rx"		"0"
+				"Petrol_wheel_ry"		"0"
+				"Petrol_wheel_rz"		"0"
+			}
+
+			"#Truck_Tire"
+			{
+				"Petrol_wheel_model"		"models/props_vehicles/tire001b_truck.mdl"
+				"Petrol_wheel_rx"		"0"
+				"Petrol_wheel_ry"		"0"
+				"Petrol_wheel_rz"		"0"
+			}
+
+			"#Car_Tire"
+			{
+				"Petrol_wheel_model"		"models/props_vehicles/tire001c_car.mdl"
+				"Petrol_wheel_rx"		"0"
+				"Petrol_wheel_ry"		"0"
+				"Petrol_wheel_rz"		"0"
+			}
+
+			"#File_Cabinet"
+			{
+				"Petrol_wheel_model"		"models/props_wasteland/controlroom_filecabinet002a.mdl"
+				"Petrol_wheel_rx"		"90"
+				"Petrol_wheel_ry"		"0"
+				"Petrol_wheel_rz"		"0"
+			}
+
+			"File Cabinet on side"
+			{
+				"Petrol_wheel_model"		"models/props_wasteland/controlroom_filecabinet002a.mdl"
+				"Petrol_wheel_rx"		"0"
+				"Petrol_wheel_ry"		"90"
+				"Petrol_wheel_rz"		"0"
+			}
+
+			"#Blue_Barrel"
+			{
+
+				"Petrol_wheel_model"		"models/props_borealis/bluebarrel001.mdl"
+				"Petrol_wheel_rx"		"90"
+				"Petrol_wheel_ry"		"0"
+				"Petrol_wheel_rz"		"0"
+			}
+
+			"#Oil_Drum"
+			{
+
+				"Petrol_wheel_model"		"models/props_c17/oildrum001.mdl"
+				"Petrol_wheel_rx"		"90"
+				"Petrol_wheel_ry"		"0"
+				"Petrol_wheel_rz"		"0"
+			}
+
+			"#Carousel"
+			{
+
+				"Petrol_wheel_model"		"models/props_c17/playground_carousel01.mdl"
+				"Petrol_wheel_rx"		"90"
+				"Petrol_wheel_ry"		"0"
+				"Petrol_wheel_rz"		"0"
+			}
+
+			"#Office_Chair"
+			{
+				"Petrol_wheel_model"		"models/props_c17/chair_office01a.mdl"
+				"Petrol_wheel_rx"		"90"
+				"Petrol_wheel_ry"		"0"
+				"Petrol_wheel_rz"		"0"
+			}
+
+			"#Propeller_Blade"
+			{
+				"Petrol_wheel_model"		"models\props_c17\TrapPropeller_Blade.mdl"
+				"Petrol_wheel_rx"		"90"
+				"Petrol_wheel_ry"		"0"
+				"Petrol_wheel_rz"		"0"
+			}
+			
+			"Big wheel 1"
+			{
+				"Petrol_wheel_model"  	"models/props_wasteland/wheel01.mdl"
+				"Petrol_wheel_rx"		"90"
+				"Petrol_wheel_ry"		"0"
+				"Petrol_wheel_rz"		"90"
+			}
+			
+			"Big wheel 1a"
+			{
+				"Petrol_wheel_model"  	"models/props_wasteland/wheel01a.mdl"
+				"Petrol_wheel_rx"		"90"
+				"Petrol_wheel_ry"		"0"
+				"Petrol_wheel_rz"		"90"
+			}
+			
+			"Big wheel 2"	
+			{	
+				"Petrol_wheel_model"  	"models/props_wasteland/wheel02a.mdl"
+				"Petrol_wheel_rx"		"90"
+				"Petrol_wheel_ry"		"0"
+				"Petrol_wheel_rz"		"90"
+			}
+			
+			"Big wheel 3a"
+			{	
+				"Petrol_wheel_model"		"models/props_wasteland/wheel03a.mdl"
+				"Petrol_wheel_rx"		"90"
+				"Petrol_wheel_ry"		"0"
+				"Petrol_wheel_rz"		"90"
+			}
+			
+			"Big wheel 3b"
+			{
+				"Petrol_wheel_model"		"models/props_wasteland/wheel03b.mdl"
+				"Petrol_wheel_rx"		"90"
+				"Petrol_wheel_ry"		"0"
+				"Petrol_wheel_rz"		"90"
+			}
+		}	
+		
+	}
+	
+	"Slider"
+	{
+		"Label"				"#WheelTool_torque"
+		"Description"		"#WheelTool_torque_desc"
+		"Type"				"Float"
+		"Min"				"10"
+		"Max"				"10000"
+		"Command"			"Petrol_wheel_torque"
+	}
+	"Slider"
+	{
+		"Label"				"#WheelTool_forcelimit"
+		"Description"		"#WheelTool_forcelimit_desc"
+		"Type"				"Float"
+		"Min"				"0"
+		"Max"				"50000"
+		"Command"			"Petrol_wheel_forcelimit"
+	}
+	"Slider"
+	{
+		"Label"				"#WheelTool_friction"
+		"Description"		"#WheelTool_friction_desc"
+		"Type"				"Float"
+		"Min"				"0"
+		"Max"				"100"
+		"Command"			"Petrol_wheel_friction"
+	}	
+	"CheckBox"
+	{
+		"Label"				"#WheelTool_nocollide"
+		"Description"		"#WheelTool_nocollide_desc"
+		"Command"			"Petrol_wheel_nocollide"
+	}
+	
+}

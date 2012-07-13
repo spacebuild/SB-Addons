@@ -1,0 +1,49 @@
+<project version="Crimson Editor 3.60">
+	<category name="conflict_base" expanded="yes">
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_base\cl_init.lua" />
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_base\init.lua" />
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_base\shared.lua" />
+	</category>
+	<category name="conflict_status_indicator" expanded="no">
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_status_indicator\cl_init.lua" />
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_status_indicator\init.lua" />
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_status_indicator\shared.lua" />
+	</category>
+	<category name="conflict_target_select" expanded="yes">
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_target_select\cl_init.lua" />
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_target_select\init.lua" />
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_target_select\shared.lua" />
+	</category>
+	<category name="conflict_missile_base" expanded="yes">
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_missile_base\init.lua" />
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_missile_base\shared.lua" />
+	</category>
+	<category name="conflict_p_laser" expanded="yes">
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_p_laser\init.lua" />
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_p_laser\shared.lua" />
+	</category>
+	<category name="conflict_missile_homing" expanded="yes">
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_missile_homing\init.lua" />
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_missile_homing\shared.lua" />
+	</category>
+	<category name="CONFLICT" expanded="yes">
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\autorun\server\sv_conflict.lua" />
+	</category>
+	<category name="ToolGun" expanded="yes">
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\weapons\gmod_tool\stools\conflict_devices.lua" />
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\weapons\gmod_tool\stools\conflict_link.lua" />
+		<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\weapons\gmod_tool\stools\conflict_weapon_short.lua" />
+	</category>
+</project>
+
+<workspace version="Crimson Editor 3.60">
+	<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_p_laser\init.lua" linenum="18" placement="0:1:-1:-1:-8:-28:69:69:1490:704" />
+	<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_base\init.lua" linenum="275" placement="0:1:-1:-1:-1:-1:92:92:1513:727" />
+	<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_s_rocketsalvo\init.lua" linenum="32" placement="0:1:-1:-1:-1:-1:115:115:1536:750" />
+	<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_l_cruise\init.lua" linenum="20" placement="0:1:-1:-1:-1:-1:248:257:1669:892" />
+	<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_missile_base\init.lua" linenum="24" placement="0:1:-1:-1:-1:-1:67:-7:1488:628" />
+	<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\entities\conflict_target_select\init.lua" linenum="71" placement="0:1:-1:-1:-1:-1:253:253:1674:888" />
+	<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Conflict\lua\autorun\server\sv_conflict.lua" linenum="173" placement="0:1:-1:-1:-1:-1:299:299:1720:934" />
+	<localfile path="E:\Steam\steamapps\solthar\garrysmod\garrysmod\addons\Life Support Entities\lua\entities\generator_liquid_water\init.lua" linenum="10" placement="0:1:-1:-1:-1:-1:184:184:995:730" />
+</workspace>
+

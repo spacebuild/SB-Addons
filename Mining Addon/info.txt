@@ -1,0 +1,9 @@
+"AddonInfo"
+{
+	"name"		"Asteroid Fields"
+	"version"	"1.0"
+	"author_name"	"RD/LS/SB Team"
+	"author_url"	"http://www.snakesvx.net/"
+	"author_email"			"spacebuild.dev@gmail.com"
+	"info"		"Random Asteroids in Space"
+}

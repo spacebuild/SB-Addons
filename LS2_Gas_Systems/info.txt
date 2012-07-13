@@ -1,0 +1,11 @@
+"AddonInfo"
+{
+	"name"				"Life Support: Extended V1.2"
+	"version"			"1.2"
+	"up_date"			"Today"
+	"author_name"			"Syncaidius"
+	"author_email"			"spacebuild.dev@gmail.com"
+	"author_url"			"http://www.snakesvx.net"
+	"info"				"An expansion for the current Life Support."
+	"override"			"0"
+}

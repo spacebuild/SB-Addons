@@ -1,0 +1,27 @@
+V1.2
+===============
+Fixed/Changed
+-----
+- Updated STools
+- Gas Devices/ Storages can now be repaired. Used to produce an error every time you tried to before.
+- Energy hoverball strength, resistance and speed is now set via wire.
+- Wire debug tool now works with all gas devices/storages.
+- Renamed Large Gas Reactor to Large Methane & Propane Reactor
+
+Added/Removed
+-------------
+- 3 new types of powered hoverballs. Methane, Propane and nitrous oxide.
+- Removed Micro gas reactor
+- Added Micro Methane Reactor
+- Added Micro Propane Reactor
+- Added Micro Nitrous Oxide Reactor
+- Added Large Nitrous Oxide Reactor
+- Added Huge Processed Gas Tank
+- Added Huge Natural Gas Tank
+
+
+V1.1
+============
+- Addon now works with Gmod 11 (thanks to NewOutlook)
+- Correct name for large gas reactor is now shown. Used to show 'micro gas reactor' as name
+- Fixed problem with energy hoverball not keeping its strength when loaded with duplicator

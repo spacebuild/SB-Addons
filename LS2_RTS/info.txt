@@ -1,0 +1,11 @@
+"AddonInfo"
+{
+	"name"				"Life Support 2: Resource Transit Systems v2.0a"
+	"version"			"1.0"
+	"up_date"			"Today"
+	"author_name"			"Solthar"
+	"author_email"			"spacebuild.dev@gmail.com"
+	"author_url"			"http://www.snakesvx.net"
+	"info"				"Thanks go to Sassafrass for the help!"
+	"override"			"0"
+}

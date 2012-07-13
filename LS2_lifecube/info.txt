@@ -1,0 +1,11 @@
+"AddonInfo"
+{
+	"name"				"Life Cube Resources"
+	"version"			"1.2"
+	"up_date"			"2008-06-22"
+	"author_name"		"Lifecell(a.k.a Hein)"
+	"author_email"			"spacebuild.dev@gmail.com"
+	"author_url"		"http://www.snakesvx.net"
+	"info"				"Generate resources. The fast and easy way.(Steam, water, hwater, energy, air, coolant and ZPE)"
+	"override"			"0"
+}

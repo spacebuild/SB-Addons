@@ -1,0 +1,1 @@
+ASTEROID_MOD = 1

@@ -1,0 +1,11 @@
+"AddonInfo"
+{
+	"name"				"Life Support Generator Addon."
+	"version"			"1.11"
+	"up_date"			"Today"
+	"author_name"			"-[SB]- Spy"
+	"author_email"			"spacebuild.dev@gmail.com"
+	"author_url"			"http://www.snakesvx.net"
+	"info"				"Fixed a small bug."
+	"override"			"0"
+}

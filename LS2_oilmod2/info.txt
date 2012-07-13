@@ -1,0 +1,9 @@
+"AddonInfo"
+{
+	"name"		"Oil Mod"
+	"version"	"V2.0.0"
+	"author_name"	"Terence, With code from Paradukes and Shadow25 And with help from Tad2020! And A fix by NewOutlook!"
+	"author_email"			"spacebuild.dev@gmail.com"
+	"author_url"	"http://www.snakesvx.net"
+	"info"		"Collect and process oil for petrol For use on generators and Petrol-Thrusters"
+}

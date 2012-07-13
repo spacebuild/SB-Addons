@@ -1,0 +1,11 @@
+"AddonInfo"
+{
+	"name"				"CDS: Conflict Systems"
+	"version"			"1.0"
+	"up_date"			"Today"
+	"author_name"			"Solthar"
+	"author_email"			"Solthar@Gmail.com"
+	"author_url"			""
+	"info"				"An Eve inspired turret system"
+	"override"			"1"
+}
