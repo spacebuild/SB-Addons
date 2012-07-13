@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture" "Planets/inneratmosphere3"
+	"$translucent" 1
+	"$model"	1
+}

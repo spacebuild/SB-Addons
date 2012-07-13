@@ -1,0 +1,11 @@
+"vertexlitgeneric"
+{
+	"$basetexture" 		"ce_miningmodels/miner_bodies/shadowseries/ce_shadowseriesmk001"
+	"$surfaceprop" 		"metal"
+	"$envmaptint" 		"[0.5 0.5 0.5]"
+	"$envmap" 			"env_cubemap"
+	"$envmapsaturation"	"0.3"
+	"$translucent"		"1"
+	"$model" 			"1"
+	"$selfillum"		"150"
+}

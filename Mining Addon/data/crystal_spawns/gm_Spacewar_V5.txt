@@ -1,0 +1,25 @@
+"asteroids"
+{
+	"1"
+	{
+	   "coordinates"
+	   {
+	  	"x" 0
+	  	"y" 0
+	  	"z" 0
+	   }
+   	"radius" 256
+	"size" "small"
+   	}
+	"1"
+	{
+	   "coordinates"
+	   {
+	  	"x" 2000
+	  	"y" 2000
+	  	"z" 2000
+	   }
+   	"radius" 256
+	"size" "small"
+   	} 
+}

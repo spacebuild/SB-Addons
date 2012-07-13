@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "landforms/sandngrass"
+	"$normalmap" "landforms/sandngrass_n"
+	"$surfaceprop" "Dirt"
+}

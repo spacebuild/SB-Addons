@@ -1,0 +1,9 @@
+"AddonInfo"
+{
+	"name"		"Custom Damage System"
+	"version"	"0.1"
+	"author_name"	"SnakeSVx"
+	"author_email"			"spacebuild.dev@gmail.com"
+	"author_url"	"http://www.snakesvx.net/"
+	"info"		"Custom Damage System"
+}

@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/metal/Miner1_core2"
+	"$nocull" 1
+	"$translucent" 1
+}

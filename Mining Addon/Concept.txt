@@ -1,0 +1,112 @@
+Concept for Mining Addon
+
+
+
+
+In a nutshell:
+
+
+You mine ore, which you can refine to get resources (and possibly modded for credits in rp addons).
+
+
+
+
+How to obtain ore(s):
+
+
+Asteroids in space, which is mined by a mining "generator" (?).
+
+"Pillars" on planets, which are mined by a mining "generator" (?).
+
+Maybe make roids use a laser miner, and pillars a drill miner? Or similar (?).
+
+
+
+
+What to do with the ore resource(s):
+
+
+Mods can use it for things such as "harder" to obtain res then the others, for stuff such as guns.
+Should be easy to mod so it can give "credits" or similar things when refined, for rp mods.
+
+Refine ore to get resources, possibly a fixed ratio of a few/all resources per ore, or a bit random.
+Different kind (?) could refine to different stuff.
+
+
+
+
+How to refine:
+
+
+Could be a refining generator, a "terminal" (like spaceage),
+or manually done by creating ore entities which are put in a processing thing (like the faction mining addon)
+
+
+
+
+How would roids work:
+
+
+They could be normal entities spawned in space, but that would generate lag (altough sweeping ships might be fun to make for planetary mining and refining).
+
+They could be static entities spawned in space, which would be less laggy.
+
+They could be in a collision group that dont hit anything, for (I think) less lag,
+but ships would not collide, which means both less lag and less realism when a ship would have collided.
+
+They could be "holograms", and use special traces, which would lag less normally,
+but possibly lag more while people mine. Also would not have as "accurate" traces.
+Same thing about collision as the above idea aswell.
+
+
+They should have a "health", which is drained while it is being mined,
+and when it is 0 the roid could be removed.
+
+The health could also slowly recharge, altough maybe only when it is not being mined,
+as then calculating time of life for mined roids would be easyer.
+
+This would mean leaving roids almost empty would not be as annoying for other miners,
+as then it would have recharged (anti minging).
+Otherwise a minge could mine all the roids to "almost empty", and when someone else mines,
+they dont get much ore, and has to move to a new roid all the time.
+
+
+
+
+How would "pillars" work:
+
+
+They would probably be static entities spawned on planets "stuck in the ground",
+as it would probably be even more annoying if you could go trough stuff on ground,
+especially with drills instead of lasers to mine.
+
+
+To make it a little bit harder to mine them,
+they could be made to damage stuff that touch them (like in spaceage).
+
+
+They should have a "health", which is drained while it is being mined,
+and when it is 0 the "pillar" could be removed.
+
+The health could also slowly recharge, altough maybe only when it is not being mined,
+as then calculating time of life for mined "pillars" would be easyer.
+
+This would mean leaving "pillars" almost empty would not be as annoying for other miners,
+as then it would have recharged (anti minging).
+Otherwise a minge could mine all the "pillars" to "almost empty", and when someone else mines,
+they dont get much ore, and has to move to a new "pillar" all the time.
+
+
+
+
+How would the entities be spawned?
+
+
+It could be the mapper who add logic cases which are read by mining addon,
+like sb3 read logic cases to create atmo.
+
+It could be a .txt that is saved by running a convar, which contains pos, angle and such of the entities.
+
+It could be any of the earlyer, which control spawning of a "master" entity,
+that dynamicly spawn the other entities,
+like a main pillar that spawn pillars on the surfaces around it (that isnt props).

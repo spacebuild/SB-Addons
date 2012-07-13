@@ -1,0 +1,1 @@
+This addon is NOT finnished. It still needs more planets, and for the map to have better placement of planets! (And improvements to the map in general)

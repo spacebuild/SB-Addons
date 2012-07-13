@@ -1,0 +1,11 @@
+"vertexlitgeneric"
+{
+	"$basetexture" 		"ce_miningmodels/mininglasers/crystal"
+	"$surfaceprop" 		"glass"
+	"$envmaptint" 		"[0.5 0.5 0.5]"
+	"$bumpmap" 			"ce_miningmodels/mininglasers/crystal_bump"
+	"$envmap" 			"env_cubemap"
+	"$envmapsaturation"	"0.3"
+	"$translucent"		"1"
+	"$model" 			"1"
+}

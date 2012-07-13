@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/metal/LargeDeposit4"
+	"$model" 1
+	"$surfaceprop" boulder
+}

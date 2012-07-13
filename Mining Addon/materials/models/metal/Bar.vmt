@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/metal/Bar"
+	"$normalmap" "models/metal/Ore_normal"
+	"$surfaceprop" "Metal"
+	"$translucent" 1
+	"$model" 1
+}

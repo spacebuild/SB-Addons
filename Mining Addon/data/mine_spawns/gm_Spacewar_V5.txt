@@ -1,0 +1,15 @@
+"asteroids"
+{
+	"1"
+	{
+	   "coordinates"
+	   {
+	  	"x" 0
+	  	"y" 0
+	  	"z" 0
+	   }
+   	"radius" 256
+	"size" "small"
+	"type" "mine"
+   	} 
+}

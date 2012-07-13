@@ -1,0 +1,10 @@
+"vertexlitgeneric"
+{
+	"$basetexture" 		"ce_miningmodels/miner_bodies/shadowseries/border"
+	"$surfaceprop" 		"metal"
+	"$envmaptint" 		"[0.2 0.2 0.2]"
+	"$bumpmap" 			"ce_miningmodels/miner_bodies/shadowseries/border_bump"
+	"$envmap" 			"env_cubemap"
+	"$envmapsaturation"	"0.1"
+	"$model" 			"1"
+}

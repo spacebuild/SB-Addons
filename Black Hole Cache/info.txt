@@ -1,0 +1,10 @@
+"AddonInfo"
+{
+	"name"				"Black Hole Cache"
+	"version"			""
+	"up_date"			""
+	"author_name"		"Originally by Spacetech updated by Jenova266"
+	"author_email"			"spacebuild.dev@gmail.com"
+	"author_url"		"http://www.snakesvx.net"
+	"info"				"Now a CAF addon :)"
+}

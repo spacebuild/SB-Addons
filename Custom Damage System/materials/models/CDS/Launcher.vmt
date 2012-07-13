@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/CDS/Launcher"
+	"$normalmap" "models/CDS/Launcher_normal"
+	"$dudvmap" "models/CDS/Launcher_dudv"
+	"$model"	1
+}

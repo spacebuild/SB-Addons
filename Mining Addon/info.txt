@@ -1,9 +1,9 @@
 "AddonInfo"
 {
-	"name"		"Asteroid Fields"
+	"name"		"Mining Addon"
 	"version"	"1.0"
-	"author_name"	"RD/LS/SB Team"
-	"author_url"	"http://www.snakesvx.net/"
+	"author_name"	"SnakeSVx"
 	"author_email"			"spacebuild.dev@gmail.com"
-	"info"		"Random Asteroids in Space"
+	"author_url"	"http://www.snakesvx.net/"
+	"info"		"Mining on planets and in space"
 }

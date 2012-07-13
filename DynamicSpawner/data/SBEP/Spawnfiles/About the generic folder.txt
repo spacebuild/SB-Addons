@@ -1,0 +1,1 @@
+This folder contains planets/stations that don't have a specific map. You can copy them into whatever map's folder you'd like.

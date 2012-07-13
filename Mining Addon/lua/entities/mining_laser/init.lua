@@ -1,130 +1,188 @@
 AddCSLuaFile( "cl_init.lua" )
 AddCSLuaFile( "shared.lua" )
 
-util.PrecacheSound( "common/warning.wav" )
-
 include('shared.lua')
 
 local Ground = 1 + 0 + 2 + 8 + 32
 local BeamLength = 512
 local Energy_Increment = 200
-local Refire_Rate = 0.6
+local Minelevel = 200
+local Maxlength = 1024
+--local Refire_Rate = 0.6
 
 function ENT:Initialize()
 	self.BaseClass.Initialize(self)
-	RD_AddResource(self, "energy", 0)
 	self.Active = 0
-	if not (WireAddon == nil) then self.Inputs = Wire_CreateInputs(self, { "Fire" }) end
-	local phys = self:GetPhysicsObject()
-	if (phys:IsValid()) then
-		phys:SetMass(120)
-		phys:Wake()
+	self.Minelevel = Minelevel
+	self.BeamLength = BeamLength
+	if not (WireAddon == nil) then
+		self.WireDebugName = self.PrintName
+		self.Inputs = Wire_CreateInputs(self, { "On", "MiningPower", "Range" })
+		self.Outputs = Wire_CreateOutputs(self, {"On" })
+	else
+		self.Inputs = {{Name="On"},{Name="MiningPower"},{Name="Range"}}
 	end
 end
 
 function ENT:TurnOn()
-	if ( self.Active == 0 ) then
 		self.Active = 1
-		self:SetOOO(1)
-	end
+		if not (WireAddon == nil) then Wire_TriggerOutput(self, "On", self.Active) end
 end
 
 function ENT:TurnOff()
-	if ( self.Active == 1 ) then
+	if (self.Active == 1) then
+		self:StopSound( "Airboat_engine_idle" )
+		self:EmitSound( "Airboat_engine_stop" )
+		self:StopSound( "apc_engine_start" )
 		self.Active = 0
-		self:SetOOO(0)
+	end
+end
+
+function ENT:SetActive( value )
+	if not (value == nil) then
+		if (value ~= 0 and self.Active == 0 ) then
+			self:TurnOn()
+		elseif (value == 0 and self.Active == 1 ) then
+			self:TurnOff()
+		end
+	else
+		if ( self.Active == 0 ) then
+			self.lastused = CurTime()
+			self:TurnOn()
+		else
+				self:TurnOff()
+		end
 	end
 end
 
 function ENT:TriggerInput(iname, value)
-	if (iname == "Fire") then
+	if (iname == "On") then
 		self:SetActive(value)
 	end
-end
-
-local function Discharge(ent)
-	local Pos = ent:GetPos()
-	local Ang = ent:GetAngles()
---	Ang:RotateAroundAxis(Ang:Up(), 180)  --the thing spawns backwards  o_O
-	Pos = Pos+Ang:Up()*16
-	local trace = {}
-	trace.start = Pos
-	trace.endpos = Pos+(Ang:Forward()*BeamLength)
-	trace.filter = { ent }
-	local tr = util.TraceLine( trace )
-	if (tr.Hit) then
-		local hitent = tr.Entity
-		if (hitent.IsAsteroid == 1 and hitent.resource ~= nil and hitent.resource ~= false) then
-			if (math.random(1, (hitent.resource.yield or 1)) < 12) then
-			local try = math.ceil(hitent.resource.yield/25)
-				for var = 0, try, 1  do
-				--while (hitent.resource.yield > 0) do
-					local raw_res = ents.Create( "raw_resource" )
-						raw_res:SetPos( hitent:GetPos()+(VectorRand()*40) )
-						raw_res:SetAngles(Angle(math.random(1, 360), math.random(1, 360), math.random(1, 360))) 
-					raw_res:Spawn()
-					
-					local phys = raw_res:GetPhysicsObject()
-					phys:EnableMotion(true)
-					phys:EnableGravity(false)
-					raw_res.grav = 0
-					
-					local Ang = raw_res:GetUp()
-					local force = Ang * 200
-					phys:ApplyForceCenter(force)
-					
-					raw_res.resource.name = hitent.resource.name
-					raw_res.resource.rarity = hitent.resource.rarity
-					if (raw_res.resource.rarity == 3) then
-						raw_res:SetColor(Color(255, 0, 0, 255 ))
-					elseif (raw_res.resource.rarity == 2) then
-						raw_res:SetColor(Color( 0, 255, 0, 255 ))
-					elseif (raw_res.resource.rarity == 1) then
-						raw_res:SetColor(Color( 0, 0, 255, 255 ))
-					end
-					
-					if (hitent.resource.yield >= 25) then
-						raw_res.resource.yield = 25
-						hitent.resource.yield = hitent.resource.yield - 25
-					else
-						raw_res.resource.yield = hitent.resource.yield
-						hitent.resource.yield = 0
-					end
-					raw_res:SetOverlayText( raw_res.resource.name .. ": " .. raw_res.resource.yield )
-				end
-				--hitent:SetKeyValue("exploderadius","1")
-				--hitent:SetKeyValue("explodedamage","1")
-				--hitent:Fire("break","","0.0")
-				--hitent:Fire("kill","","0.1")
-				hitent:Remove()
-			end
-		else
-			util.BlastDamage(ent,ent,tr.HitPos,1,40)
-		end
+	if (inname == "MiningPower") then
+		self.Minelevel = value
 	end
-	local effectdata = EffectData()
-	effectdata:SetEntity( ent )
-	effectdata:SetOrigin( Pos )
-	effectdata:SetStart( tr.HitPos )
-	effectdata:SetAngle( Ang )
-	util.Effect( "mining_beam", effectdata, true, true )
+	if (iname == "Range") then
+		if value > Maxlength then
+			self.Beamlength = Maxlength
+			return
+		end
+		self.Beamlength = value
+	end
 end
 
-function ENT:Attack()
-	if ( RD_GetResourceAmount(self, "energy") >= Energy_Increment ) then
-		RD_ConsumeResource(self, "energy", Energy_Increment)
-		Discharge(self)
+function ENT:Damage()
+	if (self.damaged == 0) then self.damaged = 1 end
+	if ((self.Active == 1) and (math.random(1, 10) <= 4)) then
+		self:TurnOff()
+	end
+end
+
+function ENT:Repair()
+	self:SetColor(Color(255, 255, 255, 255))
+	self:SetHealth( self:GetMaxHealth( ))
+	self.damaged = 0
+end
+
+function ENT:Destruct()
+	if CAF and CAF.GetAddon("Mining Addon") then
+		CAF.GetAddon("Mining Addon").Destruct( self, true )
+	end
+end
+
+function ENT:OnRemove()
+	self.BaseClass.OnRemove(self)
+	self:StopSound( "Airboat_engine_idle" )
+end
+
+function ENT:Mine()
+	local ent = self
+	local RD = CAF.GetAddon("Resource Distribution")
+	self.energy =  RD.GetResourceAmount(self, "energy")
+	--Msg(self.energy)
+	--[[local mul = 1
+	if GAMEMODE.IsSpacebuildDerived and self.environment and (self.environment:IsSpace() or self.environment:IsStar() )then
+		mul = 0 --Make the device still absorb energy, but not produce any air anymore
+	elseif GAMEMODE.IsSpacebuildDerived and self.environment and  self.environment:IsEnvironment() and not self.environment:IsPlanet() then
+		mul = 0.5
+	end]] --Useless Old crap. Mul isn't used anywhere >.>
+	local einc = math.Round((Energy_Increment * (self.Minelevel / 200)) * (self.BeamLength / 512))
+	einc = einc --What the...
+	if (self.energy >= einc) then
+		RD.ConsumeResource(self, "energy", einc)
+		local Pos = ent:GetPos()
+		local Ang = ent:GetAngles()
+		--Ang:RotateAroundAxis(Ang:Up(), 180)  --the thing spawns backwards  o_O
+		Pos = Pos+Ang:Up()*16
+		local trace = {}
+		trace.start = Pos
+		if string.lower(self:GetModel()) == "models/props_trainstation/tracklight01.mdl" then
+			trace.endpos = Pos+(Ang:Forward()*self.BeamLength)
+		else
+			trace.endpos = Pos+(Ang:Up()*self.BeamLength)
+		end
+		trace.filter = { ent }
+		local tr = util.TraceLine( trace )
+		--[[Msg("Asteroid ")
+		Msg(tr.Entity)
+		Msg(" " .. tr.Entity.mine_amount .." remaining\n")]]
+		if (tr.Entity.mine_amount ~= nil and tr.Entity.mine_amount > 0) then
+			local take = self.Minelevel*4001 --testing speed pl0x
+			if tr.Entity.mine_amount < take then
+				take = tr.Entity.mine_amount
+			end
+			if string.lower(tr.Entity:GetClass()) == "asteroid" then
+				local notes = "naquadah, titanium, nitrogen, hydrogen, O2, CO2"
+				--local take = units --Useless var, only refenced in the line below.
+				local n_amt = math.Round(take * 0.35) --Methinks these values could use more randomization. Or, better yet, seperate aseroids for each type! That way the resources could actually have Rarities and Values! *giddy*
+				local t_amt = math.Round(take * 0.3)
+				local h_amt = math.Round(take * 0.20)
+				local ni_amt = math.Round(take * 0.05)
+				local o2_amt = math.Round(take * 0.05)
+				local co2_amt = math.Round(take * 0.05)
+		
+				RD.SupplyResource(self, "naquadah", n_amt)
+				RD.SupplyResource(self, "titanium", t_amt)
+				RD.SupplyResource(self, "nitrogen", h_amt)
+				RD.SupplyResource(self, "hydrogen", ni_amt)
+				RD.SupplyResource(self, "oxygen", o2_amt)
+				RD.SupplyResource(self, "carbon dioxide", co2_amt)
+				tr.Entity.mine_amount = tr.Entity.mine_amount - take
+				if (tr.Entity.mine_amount < 1) then
+					CAF.GetAddon("Mining Addon").Destruct( tr.Entity, 2) --Mined out of resources
+					tr.Entity:Remove()
+				end
+			elseif string.lower(tr.Entity:GetClass()) == "mine" then
+				if tr.Entity:GetSkin() == 0 then
+					RD.SupplyResource(self, "titanium", take)
+					tr.Entity.mine_amount = tr.Entity.mine_amount - take
+				elseif tr.Entity:GetSkin() == 1 then
+					RD.SupplyResource(self, "naquadah", take)
+					tr.Entity.mine_amount = tr.Entity.mine_amount - take
+				end
+				if (tr.Entity.mine_amount < 1) then
+					CAF.GetAddon("Mining Addon").Destruct( tr.Entity, 2) --Mined out of resources
+					tr.Entity:Remove()
+				end
+			end
+		end
+		local effectdata = EffectData()
+		effectdata:SetEntity( ent )
+		effectdata:SetOrigin( Pos )
+		effectdata:SetStart( tr.HitPos )
+		effectdata:SetAngle( Ang )
+		util.Effect( "mining_beam", effectdata, true, true )
+		--Msg('Thought')
 	else
-		self:EmitSound( "common/warning.wav" )
+		self:TurnOff()
 	end
 end
 
 function ENT:Think()
 	self.BaseClass.Think(self)
-	
 	if ( self.Active == 1 ) then
-		self:Attack()
+			self:Mine()
 	end
-	self:NextThink(CurTime() + Refire_Rate)
+	self:NextThink( CurTime() + 1 )
 	return true
 end

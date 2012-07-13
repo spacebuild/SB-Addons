@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "landforms/redsand"
+	"$surfaceprop" "Dirt"
+	"$model" 1
+}

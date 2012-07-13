@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/CDS/turrets/metal_boron_platesA_desatur"
+	"$nolod" 1
+	"$model" 1
+}

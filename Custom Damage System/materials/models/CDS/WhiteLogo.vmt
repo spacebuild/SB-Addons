@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/CDS/WhiteLogo"
+	"$surfaceprop" "MetalPanel"
+}
